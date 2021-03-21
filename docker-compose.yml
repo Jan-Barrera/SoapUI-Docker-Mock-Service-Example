@@ -1,0 +1,10 @@
+version: '3.3'
+services:  
+  mock-service:
+    build: .
+    container_name: soapui
+    network_mode: host
+    volumes:
+      - ./Mock-Service-soapui-project.xml:/root/Mock-Service-soapui-project.xml
+    ports:
+      - "8080:8080"
